@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+html,
+body {
+  height: 100%;
+  font-family: "DM Sans", serif !important;
+}
+em-emoji-picker {
+  width: 350px;
+  height: 400px;
+  resize: horizontal;
+  overflow: auto;
+}
+
+/* Custom scrollbar styles */
+.scrollbar {
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(176, 174, 174, 0.7) #ddd; /* Firefox */
+  transition: scrollbar-color 0.3s ease, scrollbar-width 0.3s ease;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #ddd; /* Track color */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: gray; /* Thumb color */
+  border-radius: 100%; /* Rounded edges */
+  transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+.scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: darkgray; /* Hover effect */
+}
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 221 24% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 216 33% 95%;
+    --muted-foreground: 222 9% 45%;
+
+    --accent: 260 83% 75%;
+    --accent-foreground: 255 100% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 75% 59%;
+
+    --chart-1: 220 98% 60%;
+    --chart-2: 160 84% 39%;
+    --chart-3: 291 64% 42%;
+    --chart-4: 43 96% 56%;
+    --chart-5: 15 100% 64%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 25% 96%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 243 75% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 221 24% 93%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 243 75% 59%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 243 100% 69%;
+    --primary-foreground: 243 100% 15%;
+
+    --secondary: 222 20% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 260 100% 76%;
+    --accent-foreground: 260 100% 15%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 20% 20%;
+    --input: 222 20% 20%;
+    --ring: 243 100% 69%;
+
+    --chart-1: 220 100% 70%;
+    --chart-2: 160 90% 55%;
+    --chart-3: 291 70% 65%;
+    --chart-4: 43 90% 60%;
+    --chart-5: 15 90% 60%;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 243 100% 69%;
+    --sidebar-primary-foreground: 243 100% 15%;
+    --sidebar-accent: 222 20% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 222 20% 20%;
+    --sidebar-ring: 243 100% 69%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  button[data-placeholder] {
+    @apply text-muted-foreground;
+  }
+}
