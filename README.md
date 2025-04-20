@@ -62,17 +62,28 @@ GOOGLE_CLIENT_SECRET=<your-google-client-secret>
 GOOGLE_CALLBACK_URL=http://localhost:8000/api/auth/google/callback
 
 
-FRONTEND_ORIGIN=http://localhost:3000
-FRONTEND_GOOGLE_CALLBACK_URL=http://localhost:3000/google/callback
+FRONTEND_ORIGIN=http://localhost:5173
+FRONTEND_GOOGLE_CALLBACK_URL=http://localhost:5173/google/callback
 ```
 
 ### 3. Run the Application
 
 Install dependencies and start the development server:
 
-```bash
+```Go to your Client Directory
 npm install
 npm run dev
+```
+
+```Go to Backend Directory
+npm install
+npm run seed  ##for first time user only
+npm run dev
+```
+
+```Setup atleast these links in the Google Auth Console for external users
+http://localhost:8000/api/auth/google/callback
+http://localhost:5173
 ```
 
 Access the backend at `http://localhost:8000`.
