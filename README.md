@@ -48,7 +48,7 @@ Follow along step-by-step by watching the full guide on YouTube.
 
 ### 2. Set Up Environment Variables
 
-Create a `.env` file in the root of your project and configure these variables:
+Create the `.env` variables to your root directories by following `.env.example`
 
 ```plaintext
 PORT=8000
@@ -86,6 +86,7 @@ http://localhost:8000/api/auth/google/callback
 http://localhost:5173
 ```
 
+Access the frontend at `http://localhost:5173`
 Access the backend at `http://localhost:8000`.
 
 ---
